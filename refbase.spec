@@ -21,7 +21,6 @@ Requires:	webserver
 
 BuildArch:	noarch
 
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 refbase is a web-based, standards-compliant, multi-user interface 
