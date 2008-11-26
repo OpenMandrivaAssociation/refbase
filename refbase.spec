@@ -1,6 +1,6 @@
 %define 	name refbase
-%define		version 0.9.0
-%define		release %mkrel 4
+%define		version 0.9.5
+%define		release %mkrel 1
 
 Summary: 	Web-based, multi-user interface for managing scientific literature & citations
 
@@ -9,7 +9,7 @@ Version:	%{version}
 Release:	%{release}
 Source0:	http://prdownloads.sourceforge.net/refbase/%{name}-%{version}.tar.bz2
 
-License:	GPL
+License:	GPLv2+
 Group:		System/Servers
 Url:		http://refbase.sourceforge.net
 
