@@ -1,6 +1,6 @@
 %define 	name refbase
 %define		version 0.9.5
-%define		release %mkrel 2
+%define		release %mkrel 3
 
 Summary: 	Web-based, multi-user interface for managing scientific literature & citations
 
@@ -14,14 +14,12 @@ Group:		System/Servers
 Url:		http://refbase.sourceforge.net
 
 Requires:	bibutils
-Requires:	MySQL
+Requires:	mysql
 Requires:	mod_php
 Requires:	php-mysql
 Requires:	webserver
 
 BuildArch:	noarch
-
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 refbase is a web-based, standards-compliant, multi-user interface 
@@ -38,8 +36,6 @@ To finish the installation, follow the procedure located in
 %build
 
 %install
-%{__rm} -rf  %{buildroot}/
-
 # install files
 install -d -m 755  %{buildroot}/%{_var}/www/html/%{name}
 perl -pi -e 's|/usr/local/mysql/bin/mysql|"%{_bindir}/mysql"|;' install.php
@@ -47,16 +43,7 @@ cp -pRH *  %{buildroot}/%{_var}/www/html/%{name}
 chmod 644  %{buildroot}/%{_var}/www/html/%{name}/install.sql
 chmod 644  %{buildroot}/%{_var}/www/html/%{name}/contrib/endnote/endnote2mysql.php
 
-%clean
-rm -rf  %{buildroot}/
-
-#%post
-
-#%postun
-
 %files
 %defattr(-,root,root,0755)
 %{_var}/www/html/%{name}/*
 %doc AUTHORS BUGS ChangeLog COPYING INSTALL NEWS README TODO UPDATE
-
-
