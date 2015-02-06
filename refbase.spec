@@ -1,6 +1,6 @@
 %define 	name refbase
 %define		version 0.9.5
-%define		release %mkrel 3
+%define release 4
 
 Summary: 	Web-based, multi-user interface for managing scientific literature & citations
 
