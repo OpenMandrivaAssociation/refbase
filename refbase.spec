@@ -11,7 +11,7 @@ Source0:	http://prdownloads.sourceforge.net/refbase/%{name}-%{version}.tar.bz2
 
 License:	GPLv2+
 Group:		System/Servers
-Url:		http://refbase.sourceforge.net
+Url:		https://refbase.sourceforge.net
 
 Requires:	bibutils
 Requires:	mysql
